@@ -1,0 +1,101 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Gentium Basic', serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    width:100%;
+    height: 40px;
+    background: black;
+
+}
+
+.container {
+    width: 1040px;
+    margin: 0 auto;
+}
+
+.colorSpan {
+    color: #28c9aa;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color:white;
+    font-size: 14px;
+    line-height: 40px;
+}
+nav span {
+    padding: 0 5px;
+}
+
+header ul li {
+    display: inline-block;
+}
+header ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0 5px;
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+#slider {
+    height: 400px;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(205,202,212,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(205,202,212,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(205,202,212,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(205,202,212,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(205,202,212,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(205,202,212,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cdcad4', GradientType=0 );
+    position: relative;
+}
+.blackChair {
+    width: 50%;
+    margin-top: 40px;
+    float:left;
+}
+
+.sliderText {
+    width: 50%;
+    text-align: center;
+    float:right;
+    margin-top: 100px;
+}
+
+.sliderText h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.sliderText h2 span {
+    padding: 0 10px;
+}
+
+button {
+    background: #28c9aa;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
