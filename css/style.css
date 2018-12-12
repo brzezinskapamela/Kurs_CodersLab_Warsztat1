@@ -7,23 +7,28 @@ body {
     font-family: 'Dancing Script', cursive;
     font-family: 'Gentium Basic', serif;
     font-family: 'Raleway', sans-serif;
-}
-
-header {
-    width:100%;
-    height: 40px;
-    background: black;
-
+    background: #FFFFFF;
 }
 
 .container {
-    width: 1040px;
-    margin: 0 auto;
+    width: 1050px;
+    magrin: 0 auto;
 }
 
-.colorSpan {
+.spanColor {
     color: #28c9aa;
-    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.head {
+    position: relative;
+    padding-left: 400px;
+}
+
+header {
+    width: 100%;
+    background: #000;
+    height: 40px;
 }
 
 nav {
@@ -31,26 +36,32 @@ nav {
     justify-content: space-between;
 }
 
-.logo {
-    color:white;
+header nav h1 {
+    color: #FFF;
     font-size: 14px;
     line-height: 40px;
+    float:left;
 }
-nav span {
+
+nav h1 span {
     padding: 0 5px;
 }
 
 header ul li {
+    color: #FFF;
     display: inline-block;
 }
-header ul li a {
+
+nav ul li a {
+    color: #FFF;
     text-decoration: none;
-    color: white;
-    padding: 0 5px;
     font-size: 14px;
-    line-height: 40px;
     font-weight: bold;
+    float:right;
+    padding: 0 5px;
+    line-height: 40px;
 }
+/*slider*/
 
 #slider {
     height: 400px;
@@ -62,12 +73,16 @@ header ul li a {
     background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(205,202,212,1) 100%);
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(205,202,212,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cdcad4', GradientType=0 );
-    position: relative;
+}
+section .sliderContainer {
+    display: flex;
+    justify-content: space-between;
 }
 .blackChair {
-    width: 50%;
+    width:400px;
     margin-top: 40px;
     float:left;
+    margin-left: 200px;
 }
 
 .sliderText {
@@ -75,6 +90,10 @@ header ul li a {
     text-align: center;
     float:right;
     margin-top: 100px;
+}
+
+.sliderText h2, p, button {
+    width: 300px;
 }
 
 .sliderText h2 {
@@ -86,16 +105,93 @@ header ul li a {
     padding: 0 10px;
 }
 
-button {
+.sliderButton {
     background: #28c9aa;
     height: 50px;
     width: 200px;
     border-radius: 10px;
     font-size: 20px;
     margin-top: 20px;
+    cursor: pointer;
+    margin-left: -500px;
 }
 
-button a {
+.sliderButton a {
     color: white;
     text-decoration: none;
+
+}
+
+.sliderLeft, .sliderRight {
+    color: #28c9aa;
+    font-size: 80px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.sliderRight {
+    top: 150px;
+    right: 150px;
+}
+
+.sliderLeft {
+    top: 150px;
+    left: 150px;
+}
+/*offers*/
+
+.offers {
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 350px;
+}
+
+.offer1 {
+    background-image: url("../images/box1_img.jpg");
+    background-size: cover;
+}
+
+.offer2 {
+    background-image: url("../images/box2_img.jpg");
+    background-size: cover;
+}
+
+.offer1, .offer2, .offer3 {
+    float: left;
+    width: 300px;
+    height: 250px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.offer3 {
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    color: gray;
+}
+
+.offer2 {
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.offerBackground {
+    background: rgba(255, 255, 255, 0.3);
+    height: 50px;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    padding: 10px;
+}
+
+.offerTitle {
+    border-bottom: 5px solid #24BAA0;
+    width: 150px;
+    font-weight: bold;
+}
+
+.offer3 .offerTitle {
+    color: black;
+    font-weight: bold;
 }
