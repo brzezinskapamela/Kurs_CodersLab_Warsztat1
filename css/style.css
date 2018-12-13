@@ -12,7 +12,7 @@ body {
 
 .container {
     width: 1050px;
-    magrin: 0 auto;
+  margin: 0 auto;
 }
 
 .spanColor {
@@ -20,15 +20,11 @@ body {
     font-weight: bold;
 }
 
-.head {
-    position: relative;
-    padding-left: 400px;
-}
-
 header {
     width: 100%;
     background: #000;
     height: 40px;
+    padding-left: 100px;
 }
 
 nav {
@@ -74,7 +70,7 @@ nav ul li a {
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(205,202,212,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cdcad4', GradientType=0 );
 }
-section .sliderContainer {
+section.sliderContainer {
     display: flex;
     justify-content: space-between;
 }
@@ -143,7 +139,7 @@ section .sliderContainer {
     height: 350px;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 350px;
+    margin-left: 100px;
 }
 
 .offer1 {
@@ -196,22 +192,17 @@ section .sliderContainer {
 }
 
 /*pricing*/
-.pricing {
+.priceList {
     background: #f1f1f1;
     width: 100%;
-    height: 720px;
-    padding-top: 47px;
+    height: 750px;
+    padding-top: 50px;
+    padding-left: 280px;
+    box-sizing: border-box;
 }
 
-.pricingTitle {
-    border-bottom: 7px solid #24BAA0;
-    width: 340px;
-    text-transform: uppercase;
-    font-size: 22px;
-}
-
-.pricingBox {
-    width: 334px;
+.pricePlan {
+    width: 350px;
     height: 500px;
     border: 3px solid #d6d5d5;
     text-align: center;
@@ -219,55 +210,35 @@ section .sliderContainer {
     margin-top: 80px;
     float: left;
     background: #f9f9f9;
-
-.pricingBox:nth-of-type(2) {
-    margin: 80px 38px 0 38px;
 }
 
-.pricingBoxCircle {
-    border: 3px solid #d6d5d5;
-    width: 55px;
-    height: 55px;
-    border-radius: 40px;
-    top: -40px;
-    left: calc(50% - 30px);
-    position: absolute;
-    background-color: white;
+.pricePlan:nth-of-type(2) {
+    margin: 80px 20px 0 20px;
+    border: 3px solid #24BAA0;
+    background: #24BAA0;
 }
 
-.pricingBoxCircle::before {
-    content: "";
-    width: 26px;
-    height: 26px;
-    border-radius: 40px;
-    top: calc(50% - 13px);
-    left: calc(50% - 13px);
-    position: absolute;
-    background-color: #d6d5d5;
-}
-
-.pricingBox h2 {
-    text-transform: uppercase;
-    color: #27c7ab;
-    font-size: 23px;
-    margin-top: 27px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.pricingPrice {
-    width: 128px;
-    height: 128px;
+.pricePlanPrice {
+    width: 100px;
+    height: 100px;
     border: 1px solid #d6d5d5;
-    border-radius: 70px;
+    border-radius: 80px;
     background: white;
     padding: 20px;
     position: absolute;
     top: 80px;
-    left: calc(50% - 64px);
+    left: calc(50% - 80px);
 }
 
-.pricingPrice p:nth-of-type(1) {
+.pricePlanPrice p {
+    margin-left: -95px;
+}
+
+.pricePlan:nth-of-type(2) .pricePlanPrice {
+    border: 1px solid #24BAA0;
+}
+
+.pricePlanPrice p:nth-of-type(1) {
     font-size: 45px;
     font-weight: bold;
     color: #d6d5d5;
@@ -275,21 +246,33 @@ section .sliderContainer {
     top: 5px;
 }
 
-.pricingPrice p:nth-of-type(2) {
+.pricePlan:nth-of-type(2) p:nth-of-type(1) {
+    color: #24BAA0;
+}
+
+.pricePlanPrice p:nth-of-type(1) sup {
+    font-size: 16px;
+    position: relative;
+    top: -15px;
+}
+
+.pricePlan:nth-of-type(2) p:nth-of-type(1) sup {
+    color: #24BAA0;
+}
+
+.pricePlanPrice p:nth-of-type(2) {
     font-size: 16px;
     font-weight: bold;
     color: #d6d5d5;
     position: relative;
-    top: 9px;
+    top: 10px;
 }
 
-.pricingPrice p:nth-of-type(1) sup {
-    font-size: 16px;
-    position: relative;
-    top: -27px;
+.pricePlan:nth-of-type(2) p:nth-of-type(2) {
+    color: #24BAA0;
 }
 
-.pricingItem1, .pricingItem3 {
+.pricePlanItem1, .pricePlanItem3 {
     width: 100%;
     background-color: #e4e4e4;
     color: #939393;
@@ -300,7 +283,7 @@ section .sliderContainer {
     line-height: 42px;
 }
 
-.pricingItem2, .pricingItem4 {
+.pricePlanItem2, .pricePlanItem4 {
     width: 100%;
     background-color: #f1f1f1;
     color: #939393;
@@ -311,40 +294,210 @@ section .sliderContainer {
     line-height: 42px;
 }
 
-.pricingItem1 {
-    top: 243px;
+.pricePlanItem1 {
+    top: 262px;
 }
 
-.pricingItem2 {
-    top: 285px;
+.pricePlan:nth-of-type(2) .pricePlanItem1, .pricePlan:nth-of-type(2) .pricePlanItem3 {
+    background-color: white;
 }
 
-.pricingItem3 {
-    top: 327px;
+.pricePlanItem2 {
+    top: 304px;
 }
 
-.pricingItem4 {
-    top: 369px;
+.pricePlanItem3 {
+    top: 346px;
 }
 
-.pricingButton {
-    background-color: #27c7ab;
-    width: 200px;
-    height: 50px;
+.pricePlanItem4 {
+    top: 388px;
+}
+
+.priceButton {
+    background-color: #24BAA0;
+    width: 120px;
+    height: 35px;
     margin-left: auto;
     margin-right: auto;
-    text-transform: uppercase;
     text-align: center;
     border-radius: 10px;
-    line-height: 50px;
+    line-height: 35px;
     position: absolute;
     bottom: 18px;
-    left: calc(50% - 100px);
-    font-size: 20px;
+    left: calc(50% - 60px);
+    font-size: 16px;
     cursor: pointer;
 }
 
-.pricingButton a {
+.pricePlan:nth-of-type(2) .priceButton {
+    background-color: white;
+}
+
+.priceButton a {
     color: white;
     text-decoration: none;
+}
+
+.pricePlan:nth-of-type(2) .priceButton a {
+    color: #24BAA0;
+}
+
+.pricePlan h2 {
+    color: #24BAA0;
+    font-size: 23px;
+    margin-top: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pricePlan:nth-of-type(2) h2 {
+    color: white;
+}
+
+.circle {
+    border: 3px solid #d6d5d5;
+    width: 55px;
+    height: 55px;
+    border-radius: 40px;
+    top: -40px;
+    left: calc(50% - 30px);
+    position: absolute;
+    background-color: white;
+}
+
+.pricePlan:nth-of-type(2) .circle {
+    border: 3px solid #24BAA0;
+    background-color: #24BAA0;
+}
+
+.circle::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    position: absolute;
+    background-color: #d6d5d5;
+}
+
+.pricePlan:nth-of-type(2) .circle::before {
+    background-color: #f1f1f1;
+}
+
+.priceListTitle, .contactTitle, .choiceTitle, .summaryTitle {
+    border-bottom: 7px solid #24BAA0;
+    width: 340px;
+    font-size: 22px;
+}
+
+/*contact*/
+
+.contact {
+    width: 100%;
+    height: 550px;
+}
+
+.contactTitle {
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.contactForm {
+    display: block;
+    float: left;
+    width: 650px;
+}
+.contactForm input {
+    font-family: 'ralewayregular';
+}
+
+.contactForm textarea {
+    font-family: 'ralewayregular';
+}
+
+.contactForm2 {
+    width: 350px;
+    display: block;
+    float:right;
+    font-size:20px;
+}
+
+.contactForm2 input {
+    position: absolute;
+    cursor: pointer;
+    display:block;
+    width: 50px;
+    height: 50px;
+    float:left;
+    margin-left: -60px;
+}
+
+.contactForm textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contactForm input, .contactForm textarea {
+    width: 450px;
+    border: 1px solid #8de0d2;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.contactButton {
+    background-color: #24BAA0;
+    height: 70px;
+    width: 320px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 70px;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 80px;
+    margin-top: 30px;
+
+}
+
+.contactButton a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/*footer*/
+
+.footer {
+    margin-bottom: 100px;
+}
+
+.footer p:first-of-type {
+    float:left;
+}
+
+.footer p:last-of-type {
+    float:right;
+    font-size:20px;
+}
+
+.footer p:last-of-type a {
+    text-decoration: none;
+    color: #939393;
+}
+
+footer p:last-of-type span {
+    font-weight: 900;
+}
+
+.socialMedia {
+    display: inline-block;
+    float: right;
+    font-size: 30px;
+    margin-right: 60px;
+    margin-top: -15px;
+}
+
+.socialMedia li {
+    display: inline-block;
 }
